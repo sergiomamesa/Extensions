@@ -71,16 +71,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlobManager.cs" />
-    <Compile Include="ChecksumHelper.cs" />
-    <Compile Include="Database.cs" />
-    <Compile Include="EnumHelper.cs" />
-    <Compile Include="ExcelHelper.cs" />
-    <Compile Include="Extensions.cs" />
+    <Compile Include="BlobManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChecksumHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Database.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EnumHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SMTPHelper.cs" />
+    <Compile Include="SMTPHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TokenHelper.cs" />
-    <Compile Include="XMLHelper.cs" />
+    <Compile Include="XMLHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
