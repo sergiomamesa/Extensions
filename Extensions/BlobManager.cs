@@ -46,16 +46,17 @@ namespace Extensions
                 yield return blob;
             }
 
-            if (isRecursive)
+            if (isRecursive == false)
+                yield break;
+
+            foreach (var blob in blobDirectory.ListBlobs().OfType<CloudBlobDirectory>())
             {
-                foreach (var blob in blobDirectory.ListBlobs().OfType<CloudBlobDirectory>())
+                foreach (var innerBlob in GetFilesFrom(blob, true))
                 {
-                    foreach (var innerBlob in GetFilesFrom(blob, true))
-                    {
-                        yield return innerBlob;
-                    }
+                    yield return innerBlob;
                 }
             }
+
         }
 
         /// <summary>
